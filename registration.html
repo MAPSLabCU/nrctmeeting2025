@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <title>Annual NRCT Research Team Meeting 2025</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="img/fav/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="img/fav/favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/fav/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="MAPS Lab" />
+    <link rel="manifest" href="img/fav/site.webmanifest" />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      .section {
+        display: none;
+      }
+      .section.active {
+        display: block;
+      }
+    </style>
+    <style>
+      body {
+        font-family: "Noto Sans", sans-serif;
+        padding-top: 60px;
+      }
+      .hero {
+        background: linear-gradient(to right, #9f395a, #ff5c90);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+      }
+      .section {
+        padding: 60px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <b>NRCT Research Meeting</b>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <!-- Home with dropdown -->
+            <!-- Other menu items -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="index.html"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                General Information
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="index.html#important_date">
+                    Important Date
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="index.html#overall_program">
+                    Overall Program
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="index.html#poster_session">
+                    Poster Session
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Other menu items -->
+            <li class="nav-item">
+              <a class="nav-link" href="presentation_guideline.html">
+                Information for Presenter
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registration.html">Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="abstract_submission.html">
+                Abstract Submission
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="poster_submission.html">
+                Poster Submission
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="container text-center">
+        <img
+          src="img/logobg.png"
+          class="img-fluid"
+          style="width: 70%; height: auto"
+          alt="Header Image"
+        />
+        <h1 class="fw-bold">Annual NRCT Research Team Meeting 2025</h1>
+        <h4 class="mt-2">
+          Functional Dye for Sensing, Catalysis and Phototherapy Applications
+        </h4>
+        <h3 class="fw-bold text-danger py-2">December 8 , 2025</h3>
+        <p class="mt-2">
+          <i>
+            at Faculty of Science,Chulalongkorn University (Phayathai Road),
+            Pathumwan, Bangkok, Thailand
+          </i>
+        </p>
+        <hr />
+      </div>
+      <div class="container">
+        <h4><b>Registration Form</b></h4>
+        <span>Please complete your registration below.</span>
+      </div>
+      <div class="container py-3">
+        <div
+          id="formStatus"
+          class="alert text-center fw-bold"
+          role="alert"
+        ></div>
+        <form
+          id="registrationForm"
+          class="needs-validation"
+          novalidate
+          style="display: none"
+        >
+          <div class="mb-3">
+            <label for="email" class="form-label"><b>Email</b></label>
+            <input
+              type="email"
+              class="form-control"
+              name="Email"
+              id="email"
+              placeholder="Your Email"
+              required
+            />
+            <div class="invalid-feedback">Please fill your email.</div>
+          </div>
+          <div class="mb-3">
+            <ul>
+              <li>
+                Please re-check your email before submitting your registration.
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"><b>Registration Type</b></label>
+            <select
+              class="form-select"
+              name="Registration Type"
+              id="regType"
+              required
+            >
+              <option value="" disabled selected>Choose...</option>
+              <option>B.Sc. Student</option>
+              <option>M.Sc. Student</option>
+              <option>Ph.D. Student</option>
+              <option>Postdoctoral Researcher</option>
+              <option>Professor</option>
+            </select>
+            <br />
+            <label class="radio me-4">
+              <input type="radio" name="Role" value="Presenter" />
+              Presenter
+            </label>
+            <label class="radio me-2">
+              <input type="radio" name="Role" value="Attendee" />
+              Attendee
+            </label>
+
+            <div class="invalid-feedback">
+              Please fill your registration type.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="title" class="form-label"><b>Title</b></label>
+            <select class="form-select" name="Title" id="title" required>
+              <option value="" disabled selected>Choose...</option>
+              <option>Mr.</option>
+              <option>Ms.</option>
+              <option>Dr.</option>
+              <option>Assist. Prof. Dr.</option>
+              <option>Assoc. Prof. Dr.</option>
+              <option>Prof. Dr.</option>
+            </select>
+            <div class="invalid-feedback">Please fill your title.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">
+              <b>Full Name (first name and Last name)</b>
+            </label>
+            <input
+              type="text"
+              class="form-control"
+              name="Full Name"
+              id="name"
+              placeholder="Your Full Name"
+              required
+            />
+            <div class="invalid-feedback">
+              Please fill in your first name and last name.
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="institution" class="form-label">
+              <b>Institution</b>
+            </label>
+            <select
+              class="form-select"
+              name="Institution"
+              id="institution"
+              required
+            >
+              <option value="" disabled selected>Choose...</option>
+              <option>Chulalongkorn University</option>
+              <option>Thammasat University</option>
+              <option>Suranaree University of Technology</option>
+              <option>Mahidol University</option>
+              <option>King Mongkut's University of Technology Thonburi</option>
+            </select>
+            <div class="invalid-feedback">Please fill your institution.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="food" class="form-label"><b>Food Condition</b></label>
+            <input
+              type="text"
+              class="form-control"
+              name="Food Condition"
+              placeholder="Halal, Allergy, ..."
+              id="food"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="supervisor" class="form-label">
+              <b>
+                Research Supervisor
+                <i>(for Student)</i>
+              </b>
+            </label>
+            <select class="form-select" name="Supervisor" id="supervisor">
+              <option value="" disabled selected>Choose...</option>
+              <option>Prof. Dr. Mongkol Sukwattanasinitt</option>
+              <option>Assoc. Prof. Dr. Anyanee Kamkaew</option>
+              <option>Assoc. Prof. Dr. Nakorn Niamnont</option>
+              <option>Prof. Dr. Paitoon Rashatasakhon</option>
+              <option>Assoc. Prof. Dr. Kittipong Chainok</option>
+              <option>Assoc. Prof. Dr. Thanthapatra Bunchuay</option>
+              <option>Assoc. Prof. Dr. Anawat Ajavakom</option>
+              <option>Prof. Dr. Sumrit Wacharasindhu</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="researchTitle" class="form-label fw-bold">
+              Research/Presentation Title (for Presenter)
+            </label>
+
+            <!-- ปุ่มจัดสไตล์ -->
+            <div class="mb-2">
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark"
+                onclick="wrapText('researchTitle', '<b>', '</b>')"
+              >
+                <b>B</b>
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark"
+                onclick="wrapText('researchTitle', '<i>', '</i>')"
+              >
+                <i>I</i>
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark"
+                onclick="wrapText('researchTitle', '<u>', '</u>')"
+              >
+                <u>U</u>
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark"
+                onclick="wrapText('researchTitle', '<sup>', '</sup>')"
+              >
+                x
+                <sup>2</sup>
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark"
+                onclick="wrapText('researchTitle', '<sub>', '</sub>')"
+              >
+                x
+                <sub>2</sub>
+              </button>
+            </div>
+
+            <!-- textarea -->
+            <textarea
+              class="form-control"
+              id="researchTitle"
+              name="Research Title"
+              rows="3"
+              oninput="updatePreview()"
+              placeholder="Type your title in this field and see your title in the preview below."
+            ></textarea>
+
+            <!-- preview -->
+            <div class="mt-3 p-2 border rounded bg-light">
+              <label class="form-label text-muted">Preview:</label>
+              <div id="previewArea" style="min-height: 50px"></div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <ul>
+              <li>
+                After your registration has been successfully submitted, please
+                check your email for the registration confirmation.
+              </li>
+              <li>
+                If you do not receive the email, please check your junk or spam
+                folder first, or try registering again.
+              </li>
+              <li>
+                If you have any questions regarding the registration, please
+                email the
+                <a
+                  href="mailto:mapsgroup.floor13@gmail.com"
+                  style="text-decoration: none"
+                >
+                  meeting coordinators
+                </a>
+                .
+              </li>
+            </ul>
+
+            <br />
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="submit-button">
+            Submit
+          </button>
+        </form>
+        <div id="output"></div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer class="bg-dark text-white text-center py-2 mt-auto">
+      <span>For more information, please contact</span>
+      <span>
+        Mr. Rewat Nakwisai
+        <br />
+        <i class="fa-solid fa-envelope me-2"></i>
+        <a
+          href="mailto:mapsgroup.floor13@gmail.com"
+          class="text-info"
+          style="text-decoration: none"
+        >
+          mapsgroup.floor13@gmail.com
+        </a>
+      </span>
+      <p class="mb-0">
+        &copy; Annual NRCT Research Team Meeting 2025. All rights reserved.
+      </p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      function wrapText(textareaId, openTag, closeTag) {
+        const textarea = document.getElementById(textareaId);
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+        const selectedText = textarea.value.substring(start, end);
+        const newText = openTag + selectedText + closeTag;
+
+        textarea.setRangeText(newText, start, end, "end");
+        textarea.focus();
+
+        updatePreview(); // update preview after styling
+      }
+
+      function updatePreview() {
+        const content = document.getElementById("researchTitle").value;
+        document.getElementById("previewArea").innerHTML = content;
+      }
+    </script>
+    <script>
+      (function () {
+        "use strict";
+
+        const forms = document.querySelectorAll(".needs-validation");
+
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            async function (event) {
+              event.preventDefault();
+              event.stopPropagation();
+
+              if (!form.checkValidity()) {
+                form.classList.add("was-validated");
+
+                await Swal.fire({
+                  icon: "warning",
+                  title: "Form Incomplete",
+                  text: "Please complete all required fields before submitting your registration.",
+                });
+                return;
+              }
+
+              form.classList.add("was-validated");
+
+              // แสดง SweetAlert ระหว่างกำลังอัพโหลด
+              Swal.fire({
+                title: "Submitting Registration...",
+                text: "Please wait while we process your registration.",
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                didOpen: () => Swal.showLoading(),
+              });
+
+              const submitButton = form.querySelector('button[type="submit"]');
+              submitButton.disabled = true;
+              submitButton.classList.add("is-loading");
+
+              try {
+                const formData = new FormData(form);
+                const formDataObj = {};
+
+                for (let [key, value] of formData.entries()) {
+                  formDataObj[key] = value;
+                }
+
+                const scriptURL =
+                  "https://script.google.com/macros/s/AKfycbzII75JpjSnLqnRuf9NivNKPWjmhnmXOaG7idq0x_4w5sJRH1fWR6LqSB92trB32XwJ_g/exec";
+
+                const response = await fetch(scriptURL, {
+                  method: "POST",
+                  body: JSON.stringify(formDataObj),
+                  headers: {
+                    "Content-Type": "text/plain;charset=utf-8",
+                  },
+                });
+
+                const data = await response.json();
+
+                Swal.close(); // ปิด sweetalert loading
+
+                if (data.status === "success") {
+                  await Swal.fire({
+                    icon: "success",
+                    title: "Registration Successful",
+                    text:
+                      data.message || "Your registration has been submitted!",
+                    timer: 3000,
+                    timerProgressBar: true,
+                    showConfirmButton: false,
+                  });
+                  form.reset();
+                  form.classList.remove("was-validated");
+                } else {
+                  throw new Error(data.message || "Submission failed");
+                }
+              } catch (error) {
+                Swal.close();
+                await Swal.fire({
+                  icon: "error",
+                  title: "Error",
+                  text: error.message || "An error occurred during submission.",
+                });
+              } finally {
+                submitButton.disabled = false;
+                submitButton.classList.remove("is-loading");
+              }
+            },
+            false
+          );
+        });
+      })();
+    </script>
+    <script src="js/registration.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
