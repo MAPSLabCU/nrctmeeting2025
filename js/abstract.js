@@ -1,7 +1,7 @@
 const form = document.getElementById("abstractForm");
 const formStatus = document.getElementById("formStatus");
 
-const openDate = new Date("2025-07-16T00:00:00+07:00");
+const openDate = new Date("2025-10-16T00:00:00+07:00");
 const closeDate = new Date("2025-11-28T23:59:00+07:00");
 const now = new Date();
 
