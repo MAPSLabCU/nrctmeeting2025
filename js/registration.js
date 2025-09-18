@@ -2,7 +2,7 @@ const form = document.getElementById("registrationForm");
 const formStatus = document.getElementById("formStatus");
 
 const openDate = new Date("2025-10-16T00:00:00+07:00");
-const closeDate = new Date("2025-11-20T23:59:00+07:00");
+const closeDate = new Date("2025-11-13T23:59:00+07:00");
 const now = new Date();
 
 if (now < openDate) {
@@ -21,3 +21,4 @@ if (now < openDate) {
   formStatus.classList.add("alert-success");
   formStatus.innerHTML = `<b>The registration form is now open.</b><br>You can submit your registration until <u><b>20 November 2025, 23:59 PM</b></u>.`;
 }
+
