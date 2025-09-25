@@ -1,7 +1,7 @@
 const form = document.getElementById("registrationForm");
 const formStatus = document.getElementById("formStatus");
 
-const openDate = new Date("2025-10-16T00:00:00+07:00");
+const openDate = new Date("2025-09-16T00:00:00+07:00");
 const closeDate = new Date("2025-11-13T23:59:00+07:00");
 const now = new Date();
 
@@ -19,6 +19,7 @@ if (now < openDate) {
   // อยู่ในช่วงเวลาส่ง
   form.style.display = "block";
   formStatus.classList.add("alert-success");
-  formStatus.innerHTML = `<b>The registration form is now open.</b><br>You can submit your registration until <u><b>20 November 2025, 23:59 PM</b></u>.`;
+  formStatus.innerHTML = `<b>The registration form is now open.</b><br>You can submit your registration until <u><b>13 November 2025, 23:59 PM</b></u>.`;
 }
+
 
